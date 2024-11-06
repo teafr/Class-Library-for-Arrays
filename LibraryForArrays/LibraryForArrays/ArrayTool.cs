@@ -25,6 +25,7 @@ namespace LibraryForArrays
             } while (true);
         }
 
+
         /// <summary>
         /// This method outputs to console all elements in the row and then breaks line.
         /// You can change distance between elements by second parameter.
@@ -37,7 +38,6 @@ namespace LibraryForArrays
                 Console.Write(element + space);
             Console.WriteLine();
         }
-
         /// <summary>
         /// This method outputs to console all elements of two-dimensional array (looks like matrix).
         /// You can change distance between elements by second parameter.
@@ -53,6 +53,7 @@ namespace LibraryForArrays
                 Console.WriteLine();
             }
         }
+
 
         /// <summary>
         /// Method fills your array with random values. You can choose maximum.
@@ -139,6 +140,7 @@ namespace LibraryForArrays
                     array[row, column] = random.Next(min, max);
         }
                 
+
         /// <summary>
         /// Method Inputs values from consol and checks them for validation. 
         /// If there something wrong, program'll be asking until you put correct value. 
@@ -203,6 +205,7 @@ namespace LibraryForArrays
                 }
             }
         }
+
       
         /// <summary>
         /// Method creates new bigger array, inserts new element by index and rewrite rest values.
@@ -246,6 +249,7 @@ namespace LibraryForArrays
             array = anotherArr;
         }
 
+
         /// <summary>
         /// Returns index of given value. 
         /// If there no element in the array, method returns -1.
@@ -270,6 +274,7 @@ namespace LibraryForArrays
             }
             return -1;
         }
+
 
         /// <summary>
         /// Method sorts array from min to max by default.
@@ -345,6 +350,7 @@ namespace LibraryForArrays
             array[indexOfFirstElement] = array[indexOfSecondElement];
             array[indexOfSecondElement] = box;
         }
+
         public static void MergeSort(int[] arr, int left, int right)
         {
             if (left >= right) return;
