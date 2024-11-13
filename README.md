@@ -1,5 +1,7 @@
 # Class Library for Arrays
 
+#### [Example of using](https://github.com/teafr/Collection-of-practice/tree/practice_with_ref_out_and_enum)
+
 ### Why you use it
 If you have a lot of operations with arrays, you're gonna need something that'll make your code smaller. 
 In this case, you can use ArrayTool to save your time.
