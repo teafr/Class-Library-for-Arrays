@@ -10,8 +10,8 @@ namespace LibraryForArrays
         static private Random random = new Random();
 
         /// <summary>
-        /// Validation of length. 
-        /// Value has to be bigger then 0 and it has to be a number.
+        /// Returns value which bigger then 0 and is a number.
+        /// Method'll be asking until you put correct value
         /// </summary>
         /// <returns></returns>
         public static int InputCorrectLength()
@@ -27,7 +27,7 @@ namespace LibraryForArrays
 
 
         /// <summary>
-        /// This method outputs to console all elements in the row and then breaks line.
+        /// Outputs all elements in the row and then breaks line.
         /// You can change distance between elements by second parameter.
         /// </summary>
         /// <param name="array"></param>
@@ -39,7 +39,7 @@ namespace LibraryForArrays
             Console.WriteLine();
         }
         /// <summary>
-        /// This method outputs to console all elements of two-dimensional array (looks like matrix).
+        /// Outputs all elements of two-dimensional array (looks like matrix).
         /// You can change distance between elements by second parameter.
         /// </summary>
         /// <param name="array"></param>
@@ -56,7 +56,7 @@ namespace LibraryForArrays
 
 
         /// <summary>
-        /// Method fills your array with random values. You can choose maximum.
+        /// Fills your array with random values. You can choose maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -66,7 +66,7 @@ namespace LibraryForArrays
                 array[index] = random.Next(max);
         }
         /// <summary>
-        /// Method fills your array with random values. You can choose maximum.
+        /// Fills your array with random values. You can choose maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -76,7 +76,7 @@ namespace LibraryForArrays
                 array[index] = random.Next(max);
         }
         /// <summary>
-        /// Method fills your array with random values. You can choose maximum.
+        /// Fills your array with random values. You can choose maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -87,7 +87,7 @@ namespace LibraryForArrays
                     array[row, column] = random.Next(max);
         }
         /// <summary>
-        /// Method fills your array with random values. You can choose maximum.
+        /// Fills your array with random values. You can choose maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -98,7 +98,7 @@ namespace LibraryForArrays
                     array[row, column] = random.Next(max);
         }
         /// <summary>
-        /// Method fills your array with random values. You can choose minimum and maximum.
+        /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -108,7 +108,7 @@ namespace LibraryForArrays
                 array[index] = random.Next(min, max);
         }
         /// <summary>
-        /// Method fills your array with random values. You can choose minimum and maximum.
+        /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -118,7 +118,7 @@ namespace LibraryForArrays
                 array[index] = random.Next(min, max);
         }
         /// <summary>
-        /// Method fills your array with random values. You can choose minimum and maximum.
+        /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -129,7 +129,7 @@ namespace LibraryForArrays
                     array[row,column] = random.Next(min, max);
         }
         /// <summary>
-        /// Method fills your array with random values. You can choose minimum and maximum.
+        /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="max"></param>
@@ -142,8 +142,8 @@ namespace LibraryForArrays
                 
 
         /// <summary>
-        /// Method Inputs values from consol and checks them for validation. 
-        /// If there something wrong, program'll be asking until you put correct value. 
+        /// Inputs values and checks for validation. 
+        /// Method'll be asking until you put correct value. 
         /// </summary>
         /// <param name="array"></param>
         public static void InputArray(int[] array)
@@ -156,8 +156,8 @@ namespace LibraryForArrays
             }
         }
         /// <summary>
-        /// Method Inputs values from consol and checks them for validation. 
-        /// If there something wrong, program'll be asking until you put correct value. 
+        /// Inputs values from consol and checks them for validation. 
+        /// Method'll be asking until you put correct value. 
         /// </summary>
         /// <param name="array"></param>
         public static void InputArray(double[] array)
@@ -171,8 +171,8 @@ namespace LibraryForArrays
             }
         }
         /// <summary>
-        /// Method Inputs values from consol and checks them for validation. 
-        /// If there something wrong, program'll be asking until you put correct value. 
+        /// Inputs values from consol and checks them for validation. 
+        /// Method'll be asking until you put correct value. 
         /// </summary>
         /// <param name="array"></param>
         public static void InputArray(int[,] array)
@@ -188,8 +188,8 @@ namespace LibraryForArrays
             }
         }
         /// <summary>
-        /// Method Inputs values from consol and checks them for validation. 
-        /// If there something wrong, program'll be asking until you put correct value. 
+        /// Inputs values from consol and checks them for validation. 
+        /// Method'll be asking until you put correct value. 
         /// </summary>
         /// <param name="array"></param>
         public static void InputArray(double[,] array)
@@ -208,8 +208,8 @@ namespace LibraryForArrays
 
       
         /// <summary>
-        /// Method creates new bigger array, inserts new element by index and rewrite rest values.
-        /// Finally, it changes ref of your array.
+        /// Creates new bigger array, inserts new element by index and rewrite rest values.
+        /// Finally, it changes reference of your array.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="array"></param>
@@ -230,8 +230,8 @@ namespace LibraryForArrays
             array = anotherArr;
         }
         /// <summary>
-        /// Method creates new smaller array and rewrite values without element by index.
-        /// Finally, it changes ref of your array.
+        /// Creates new smaller array and rewrite values without element by index.
+        /// Finally, it changes reference of your array.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="array"></param>
@@ -252,7 +252,7 @@ namespace LibraryForArrays
 
         /// <summary>
         /// Returns index of given value. 
-        /// If there no element in the array, method returns -1.
+        /// If there no such element in the array, It returns -1.
         /// </summary>
         /// <param name="array"></param>
         /// <param name="target"></param>
@@ -277,8 +277,8 @@ namespace LibraryForArrays
 
 
         /// <summary>
-        /// Method sorts array from min to max by default.
-        /// If you make second parameter "true", method'll sort array from max to min.
+        /// Sorts array from min to max by default.
+        /// If you make second parameter "true", It'll sort array from max to min.
         /// </summary>
         /// <param name="array"></param>
         public static void BubbleSort(int[] array, bool descending = false)
@@ -314,8 +314,8 @@ namespace LibraryForArrays
             }
         }
         /// <summary>
-        /// Method sorts array from min to max by default.
-        /// If you make second parameter "true", method'll sort array from max to min.
+        /// Sorts array from min to max by default.
+        /// If you make second parameter "true", It'll sort array from max to min.
         /// </summary>
         /// <param name="array"></param>
         public static void BubbleSort(double[] array, bool descending = false)
