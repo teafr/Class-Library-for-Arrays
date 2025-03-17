@@ -30,8 +30,8 @@ namespace LibraryForArrays
         /// Outputs all elements in the row and then breaks line.
         /// You can change distance between elements by second parameter.
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="space"></param>
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="space">space between elements.</param>
         public static void ShowArray(IEnumerable array, string space = "\t")
         {
             foreach (var element in array)
@@ -42,8 +42,8 @@ namespace LibraryForArrays
         /// Outputs all elements of two-dimensional array (looks like matrix).
         /// You can change distance between elements by second parameter.
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="space"></param>
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="space">space between elements.</param>
         public static void ShowArray<T>(T[,] array, string space = "\t")
         {
             for (int row = 0; row < array.GetLength(0); row++)
@@ -54,55 +54,13 @@ namespace LibraryForArrays
             }
         }
 
-
-        /// <summary>
-        /// Fills your array with random values. You can choose maximum.
-        /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(int[] array, int max = 10)
-        {
-            for (int index = 0; index < array.Length; index++)
-                array[index] = random.Next(max);
-        }
-        /// <summary>
-        /// Fills your array with random values. You can choose maximum.
-        /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(double[] array, int max = 10)
-        {
-            for (int index = 0; index < array.Length; index++)
-                array[index] = random.Next(max);
-        }
-        /// <summary>
-        /// Fills your array with random values. You can choose maximum.
-        /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(int[,] array, int max = 10)
-        {
-            for (int row = 0; row < array.GetLength(0); row++)
-                for (int column = 0; column < array.GetLength(1); column++)
-                    array[row, column] = random.Next(max);
-        }
-        /// <summary>
-        /// Fills your array with random values. You can choose maximum.
-        /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(double[,] array, int max = 10)
-        {
-            for (int row = 0; row < array.GetLength(0); row++)
-                for (int column = 0; column < array.GetLength(1); column++)
-                    array[row, column] = random.Next(max);
-        }
         /// <summary>
         /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(int[] array, int min, int max)
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="max">max element value.</param>
+        /// <param name="min">min element value.</param>
+        public static void FillArray(int[] array, int min = 0, int max = 10)
         {
             for (int index = 0; index < array.Length; index++)
                 array[index] = random.Next(min, max);
@@ -110,9 +68,10 @@ namespace LibraryForArrays
         /// <summary>
         /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(double[] array, int min, int max)
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="max">max element value.</param>
+        /// <param name="min">min element value.</param>
+        public static void FillArray(double[] array, int min = 0, int max = 10)
         {
             for (int index = 0;index < array.Length; index++)
                 array[index] = random.Next(min, max);
@@ -120,9 +79,10 @@ namespace LibraryForArrays
         /// <summary>
         /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(int[,] array, int min, int max)
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="max">max element value.</param>
+        /// <param name="min">min element value.</param>
+        public static void FillArray(int[,] array, int min = 0, int max = 10)
         {
             for (int row = 0; row < array.GetLength(0); row++)
                 for(int column = 0; column < array.GetLength(1); column++)
@@ -131,21 +91,22 @@ namespace LibraryForArrays
         /// <summary>
         /// Fills your array with random values. You can choose minimum and maximum.
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="max"></param>
-        public static void FillArray(double[,] array, int min, int max)
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="max">max element value.</param>
+        /// <param name="min">min element value.</param>
+        public static void FillArray(double[,] array, int min = 0, int max = 10)
         {
             for (int row = 0; row < array.GetLength(0); row++)
                 for (int column = 0; column < array.GetLength(1); column++)
                     array[row, column] = random.Next(min, max);
         }
-                
+
 
         /// <summary>
         /// Inputs values and checks for validation. 
         /// Method'll be asking until you put correct value. 
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">array to manipulate with.</param>
         public static void InputArray(int[] array)
         {
             for (int index = 0, value; index < array.Length; index++)
@@ -159,7 +120,7 @@ namespace LibraryForArrays
         /// Inputs values from consol and checks them for validation. 
         /// Method'll be asking until you put correct value. 
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">array to manipulate with.</param>
         public static void InputArray(double[] array)
         {
             for (int index = 0; index < array.Length; index++)
@@ -174,7 +135,7 @@ namespace LibraryForArrays
         /// Inputs values from consol and checks them for validation. 
         /// Method'll be asking until you put correct value. 
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">array to manipulate with.</param>
         public static void InputArray(int[,] array)
         {
             for (int row = 0; row < array.GetLength(0); row++)
@@ -191,7 +152,7 @@ namespace LibraryForArrays
         /// Inputs values from consol and checks them for validation. 
         /// Method'll be asking until you put correct value. 
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">array to manipulate with.</param>
         public static void InputArray(double[,] array)
         {
             for (int row = 0; row < array.GetLength(0); row++)
@@ -206,15 +167,15 @@ namespace LibraryForArrays
             }
         }
 
-      
+
         /// <summary>
         /// Creates new bigger array, inserts new element by index and rewrite rest values.
         /// Finally, it changes reference of your array.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="array"></param>
-        /// <param name="index"></param>
-        /// <param name="newElement"></param>
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="index">index of new element.</param>
+        /// <param name="newElement">value of new element.</param>
         public static void AddElementInArray<T>(ref T[] array, int index, T newElement)
         {
             T[] anotherArr = new T[array.Length + 1];
@@ -234,8 +195,8 @@ namespace LibraryForArrays
         /// Finally, it changes reference of your array.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="array"></param>
-        /// <param name="index"></param>
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="index">index of element to remove.</param>
         public static void RemoveElementFromArray<T>(ref T[] array, int index)
         {
             T[] anotherArr = new T[array.Length - 1];
@@ -254,9 +215,9 @@ namespace LibraryForArrays
         /// Returns index of given value. 
         /// If there no such element in the array, It returns -1.
         /// </summary>
-        /// <param name="array"></param>
-        /// <param name="target"></param>
-        /// <returns></returns>
+        /// <param name="array">array to manipulate with.</param>
+        /// <param name="target">value to find.</param>
+        /// <returns>index of element.</returns>
         public static int BinarySearch(int[] array, int target)
         {
             int left = 0;
@@ -280,7 +241,7 @@ namespace LibraryForArrays
         /// Sorts array from min to max by default.
         /// If you make second parameter "true", It'll sort array from max to min.
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">array to manipulate with.</param>
         public static void BubbleSort(int[] array, bool descending = false)
         {
             bool changed;
@@ -317,7 +278,7 @@ namespace LibraryForArrays
         /// Sorts array from min to max by default.
         /// If you make second parameter "true", It'll sort array from max to min.
         /// </summary>
-        /// <param name="array"></param>
+        /// <param name="array">array to manipulate with.</param>
         public static void BubbleSort(double[] array, bool descending = false)
         {
             bool changed;
